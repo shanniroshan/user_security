@@ -14,6 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+
 import com.security.user.security.jwt.AuthEntryPointJwt;
 import com.security.user.security.jwt.AuthTokenFilter;
 import com.security.user.security.services.UserDetailsServiceImpl;
@@ -31,6 +32,8 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
 
   @Autowired
   private AuthEntryPointJwt unauthorizedHandler;
+  
+  
 
   @Bean
   public AuthTokenFilter authenticationJwtTokenFilter() {
@@ -108,4 +111,6 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
     
     return http.build();
   }
+  
+  
 }
